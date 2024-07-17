@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 
@@ -20,11 +21,19 @@ const Imput = styled.input`
 `
 
 
-const CampoTexto = (datosExternos) => {
-    console.log("Datos:", datosExternos )
+const CampoTexto = (props) => {
+    
+    const manejarCambio = (e) =>{
+        props.actualizarValor(e.target.value)
+        
+    }
     return <div>
-        <Label>Título</Label>
-        <Imput placeholder="Ingresar Título"></Imput>
+        <Label>{props.titulo}</Label>
+        <Imput placeholder={props.placeholder} required ={props.required}
+         value={props.valor}
+         onChange={manejarCambio}>
+
+         </Imput>
     </div>
 
 }

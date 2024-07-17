@@ -1,10 +1,16 @@
+import Banner from "../../Banner"
 import Equipo from "../../Equipos"
-
+import React from "react"
 
 
 function Inicio (){
     return(
-        <Equipo/>
+        <>
+         
+         <Banner/>
+         <Equipo/>
+         </>
+       
     )
 }
 

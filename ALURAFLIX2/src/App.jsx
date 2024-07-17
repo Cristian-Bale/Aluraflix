@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import GlobalStyles from "./components/GlobalStyles"
 import Cabecera from "./components/Cabecera"
-import Banner from "./components/Banner";
-import banner from "./assets/banner.png"
 import fotos from "./fotos.json"
 import { useState } from "react"
 import ModalZoom from "./components/ModalZoom"
@@ -10,7 +8,7 @@ import Pie from "./components/Pie"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Inicio from "./components/pages/Inicio"
 import Nuevovideo from "./components/pages/Nuevo video";
-
+import frontend from "./components/Equipos/frontend.png";
 
 
 
@@ -78,8 +76,9 @@ const App = () => {
             <Cabecera />
             <MainContainer>
               <Routes>
-              <Route path="/" element={<Banner backgroundImage={banner}/>}/>
+              
                 <Route path="/" element={<Inicio/>}/>
+                {/* <Route path="/" element={<Banner backgroundImage={banner}/>}/> */}
                 <Route path="/videos" element={<Nuevovideo/>} />
               </Routes>            
             </MainContainer>

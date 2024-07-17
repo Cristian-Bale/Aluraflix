@@ -1,23 +1,26 @@
-import { styled } from "styled-components"
+import styled from "styled-components";
+import BannerImageSrc from "../../assets/Banner.png"; 
 
-const FigureEstilizada = styled.figure`
-    background-image: ${props => `url(${props.$backgroundImage})`};
+const BannerContainer = styled.div`
+    background-image: url(${BannerImageSrc}); 
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     min-height: 328px;
     margin: 0;
     border-radius: 20px;
     max-width: 100%;
-    height:  100vh;
+    height: 100vh;
     background-size: cover;
-    
-`
-const Banner = ({backgroundImage}) => {
+`;
+
+const Banner = () => {
     return (
-    <FigureEstilizada $backgroundImage={backgroundImage}>
-    </FigureEstilizada>)
+        <BannerContainer>
+          
+        </BannerContainer>
+    );
 }
 
-export default Banner
+export default Banner;
