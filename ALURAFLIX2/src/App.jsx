@@ -8,7 +8,7 @@ import Pie from "./components/Pie"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Inicio from "./components/pages/Inicio"
 import Nuevovideo from "./components/pages/Nuevo video";
-import frontend from "./components/Equipos/frontend.png";
+
 
 
 
@@ -75,10 +75,8 @@ const App = () => {
           <AppContainer>
             <Cabecera />
             <MainContainer>
-              <Routes>
-              
+              <Routes> 
                 <Route path="/" element={<Inicio/>}/>
-                {/* <Route path="/" element={<Banner backgroundImage={banner}/>}/> */}
                 <Route path="/videos" element={<Nuevovideo/>} />
               </Routes>            
             </MainContainer>
